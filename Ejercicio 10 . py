@@ -1,0 +1,12 @@
+colores = : ['Rojo', 'Verde', 'Blanco', 'Negro', 'Rosa', 'Amarillo']
+print('Cantidad de elementos: %d' % len(colores))
+
+del colores[0]
+
+print('Cantidad de elementos: %d' % len(colores))
+
+del colores[4]
+
+print('Cantidad de elementos: %d' % len(colores))
+
+del colores[6]

@@ -1,0 +1,11 @@
+cadena1 = []
+for x in range(0,5):
+n = input("Ingresa un texto:")
+cadena1.append(n)
+
+cadena2 = cadena1[:]
+cadena2.reverse()
+
+print(cadena1)
+print(cadena2)
+ 
