@@ -1,0 +1,6 @@
+peso_payaso = 112
+peso_muñeca = 75
+n_payasos = int(input("Ingrese el numero de payasos vendidos este mes:"))
+n_muñecas = int(input("Ingrese el numero de muñecas vendidas este mes:"))
+peso_total = peso_muñeca * n_muñecas + peso_payaso * n_payasos 
+print(f"el peso total del paquete es {peso_total:}g")

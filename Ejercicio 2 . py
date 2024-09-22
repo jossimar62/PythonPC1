@@ -1,0 +1,4 @@
+precio = float(input("Digite el precio:"))
+propina = precio * 0.85 
+precio_final = precio - propina 
+print(f"El precio final a pagar es de ${precio_final:.2f}")

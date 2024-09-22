@@ -1,0 +1,13 @@
+n = int(input("Cantidad de numeros:")) #cantidad de numeros
+sumaT = 0 #suma total
+while n > 0:
+    num = int(input("Numero:"))
+    sumaT = sumaT + sumaDigitos(num)
+    n = n-1
+print(sumaT)
+def sumaDigitos(num):
+    s = 0 #suma de los digitos este numero 
+    while num > 0: 
+    s = s + num % 10 
+    num = num // 10
+    return s
