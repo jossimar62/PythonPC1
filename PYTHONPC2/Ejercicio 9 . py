@@ -1,0 +1,18 @@
+def omitir_vocales(texto):
+    # Definir las vocales que se deben omitir
+    vocales = "aeiouAEIOU"
+    
+    # Crear una nueva cadena sin las vocales
+    resultado = ""
+    for caracter in texto:
+        if caracter not in vocales:
+            resultado += caracter  # Añadir el carácter si no es una vocal
+            
+    return resultado
+
+# Solicitar entrada al usuario
+entrada_usuario = input("Ingresa una cadena de texto: ")
+
+# Llamar a la función y mostrar el resultado
+resultado = omitir_vocales(entrada_usuario)
+print("Salida sin vocales:", resultado)

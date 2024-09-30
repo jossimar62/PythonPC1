@@ -1,0 +1,22 @@
+def generar_fibonacci(limite):
+    # Lista para almacenar la serie de Fibonacci
+    fibonacci = []
+    
+    # Variables para los primeros dos números de la serie
+    a, b = 0, 1
+    
+    # Generar la serie hasta que el siguiente número exceda el límite
+    while a <= limite:
+        fibonacci.append(a)  # Agregar el número a la lista
+        a, b = b, a + b  # Actualizar los números para la siguiente iteración
+    
+    return fibonacci
+
+# Definir el límite
+limite = 50
+
+# Llamar a la función y obtener la serie
+serie_fibonacci = generar_fibonacci(limite)
+
+# Mostrar el resultado
+print("Serie de Fibonacci entre 0 y 50:", serie_fibonacci)

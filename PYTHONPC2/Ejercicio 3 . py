@@ -1,0 +1,29 @@
+numeros = []
+
+def contar_pares_impares(numeros):
+    pares = 0
+    impares = 0
+    for numero in numeros:
+        if numero % 2 == 0:
+            pares += 1
+        else:
+            impares += 1
+    return pares, impares
+
+while True:
+    respuesta = input("¿Desea ingresar un número entero positivo? (si/no): ")
+    if respuesta.lower() == "no":
+        break
+    try:
+        numero = int(input("Ingrese el número: "))
+        if numero <= 0:
+            print("Ingrese un número entero positivo.")
+        else:
+            numeros.append(numero)
+    except ValueError:
+        print("Por favor, ingrese un número entero válido.")
+
+pares, impares = contar_pares_impares(numeros)
+print("Números ingresados:", numeros)
+print("Cantidad de números pares:", pares)
+print("Cantidad de números impares:", impares)

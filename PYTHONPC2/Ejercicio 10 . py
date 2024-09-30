@@ -1,0 +1,31 @@
+def convertir_fecha(fecha):
+    # Lista de meses en español
+    meses = [
+        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+    ]
+
+    # Verificar si la fecha está en formato MM/DD/AAAA
+    if '/' in fecha:
+        mes, dia, año = fecha.split('/')  # Dividir la fecha en partes
+        mes = int(mes)  # Convertir mes a entero
+        dia = int(dia)  # Convertir día a entero
+        año = int(año)  # Convertir año a entero
+    else:
+        # Formato Mes día, AAAA
+        mes_str, dia_año = fecha.split(' ')  # Separar el mes del resto
+        dia, año = dia_año.split(',')  # Separar día y año
+        mes = meses.index(mes_str) + 1  # Obtener el número del mes
+        dia = int(dia)  # Convertir día a entero
+        año = int(año)  # Convertir año a entero
+
+    # Formatear la fecha a AAAA-MM-DD
+    fecha_formateada = f"{año}-{mes:02}-{dia:02}"
+    return fecha_formateada
+
+# Solicitar entrada al usuario
+fecha_usuario = input("Ingresa una fecha (MM/DD/AAAA o 'Mes día, AAAA'): ")
+
+# Convertir y mostrar la fecha
+resultado = convertir_fecha(fecha_usuario)
+print("Fecha en formato AAAA-MM-DD:", resultado)

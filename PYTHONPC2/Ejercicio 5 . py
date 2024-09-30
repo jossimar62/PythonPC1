@@ -1,0 +1,25 @@
+def es_primo(num):
+    """Función que verifica si un número es primo."""
+    if num < 2:  # Los números menores que 2 no son primos
+        return False
+    for i in range(2, int(num**0.5) + 1):  # Verificar divisibilidad
+        if num % i == 0:
+            return False
+    return True
+
+def suma_primos(limite):
+    """Función que calcula la suma de los números primos menores que el límite dado."""
+    suma = 0
+    for num in range(2, limite):  # Comenzar desde 2, el primer número primo
+        if es_primo(num):  # Verificar si el número es primo
+            suma += num  # Sumar el número primo a la suma total
+    return suma
+
+# Definir el límite
+limite = 100
+
+# Calcular la suma de los números primos menores que el límite
+resultado = suma_primos(limite)
+
+# Mostrar el resultado
+print("La suma de todos los números primos menores que 100 es:", resultado)
